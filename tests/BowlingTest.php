@@ -13,7 +13,7 @@ class BowlingTest extends TestCase
         $this->game = new Bowling();
     }
 
-    protected function throwMany($number, $pins)
+    protected function throwMany(int $number, int $pins)
     {
         for ($i = 0; $i < $number; ++$i) {
             $this->game->throwBall($pins);
@@ -22,7 +22,7 @@ class BowlingTest extends TestCase
 
    
 
-    public function testScoreForAllNull0()
+    public function testScoreForAllNull()
     {
         $this->throwMany(20, 0);
         $this->assertEquals(0, $this->game->calculateFinalScore());
