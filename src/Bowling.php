@@ -33,7 +33,7 @@ class Bowling
         $score += $this->throws[$throwsIndex]
           + $this->throws[$throwsIndex + 1];
         $throwsIndex += 2;
-        echo ' score : ' . $score;
+        //echo ' score : ' . $score;
       } else if($this->isStrike($throwsIndex)) {
         // Cas d'un strike
         $score +=  10 + $this->bonusStrike($throwsIndex);
@@ -48,8 +48,9 @@ class Bowling
     if($this->throws[$throwsIndex] === 10) return true;
     return false;
   }
-  public function bonusStrike($throwsIndex): int
+  public function bonusStrike(int $throwsIndex): int
   {
-    return 0;
+    return $this->throws[$throwsIndex + 1]
+      + $this->throws[$throwsIndex + 2];
   }
 }

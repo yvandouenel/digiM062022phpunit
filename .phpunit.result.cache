@@ -1,1 +1,1 @@
-{"version":1,"defects":{"BowlingTest::testScoreForAllNull":3},"times":{"BowlingTest::testScoreForAllNull":0.004,"BowlingTest::testScoreForAllTwo":0}}
+{"version":1,"defects":{"BowlingTest::testScoreForAllNull":3},"times":{"BowlingTest::testScoreForAllNull":0.005,"BowlingTest::testScoreForAllTwo":0,"BowlingTest::testScoreForOneStrikeAnd18Two":0}}
