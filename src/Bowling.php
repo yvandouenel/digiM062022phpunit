@@ -38,7 +38,7 @@ class Bowling
         // Cas d'un strike
         $score +=  10 + $this->bonusStrike($throwsIndex);
         $throwsIndex += 1;
-      }
+      }// Traiter les spares
     }
 
     return $score;

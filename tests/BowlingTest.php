@@ -45,4 +45,10 @@ class BowlingTest extends TestCase
     $this->throwMany(18, 2);
     $this->assertEquals(50, $this->game->calculateFinalScore());
   }
+  public function testScoreForOneStrikeAnd18Four()
+  {
+    $this->throwStrike();
+    $this->throwMany(18, 4);
+    $this->assertEquals(90, $this->game->calculateFinalScore());
+  }
 }
