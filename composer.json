@@ -1,0 +1,19 @@
+{
+    "name": "yvandouenel/php",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yvandouenel\\Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yvandouenel",
+            "email": "y.douenel@coopernet.fr"
+        }
+    ],
+    "require": {}
+}
