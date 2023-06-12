@@ -24,7 +24,11 @@ class BowlingTest extends TestCase
   {
     $this->game->throwBall(10);
   }
-
+  protected function throwSpare()
+  {
+    $this->game->throwBall(3);
+    $this->game->throwBall(7);
+  }
 
 
   public function testScoreForAllNull()
@@ -32,7 +36,16 @@ class BowlingTest extends TestCase
     $this->throwMany(20, 0);
     $this->assertEquals(0, $this->game->calculateFinalScore());
   }
-
+  public function testScoreForAllStrike()
+  {
+    $this->throwMany(12, 10);
+    $this->assertEquals(300, $this->game->calculateFinalScore());
+  }
+  public function testScoreForAllSpare()
+  {
+    $this->throwMany(21, 5);
+    $this->assertEquals(150, $this->game->calculateFinalScore());
+  }
   public function testScoreForAllTwo()
   {
     $this->throwMany(20, 2);
@@ -50,5 +63,11 @@ class BowlingTest extends TestCase
     $this->throwStrike();
     $this->throwMany(18, 4);
     $this->assertEquals(90, $this->game->calculateFinalScore());
+  }
+  public function testScoreForOneSpareAnd18Four()
+  {
+    $this->throwSpare();
+    $this->throwMany(18, 4);
+    $this->assertEquals(86, $this->game->calculateFinalScore());
   }
 }
